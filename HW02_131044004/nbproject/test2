@@ -1,0 +1,74 @@
+mov #0,30     ;first we store the integers in memory 
+mov #1,23
+mov #2,4
+mov #3,56
+mov #4,34
+mov #5,56
+mov #6,89
+mov #7,32
+mov #8,45
+mov #9,25     ;**********************************START********************
+mov #0,r1     ; r1=30 -------start of 1.compare 
+sub r1,#1     ;r1=(30-23)=7
+jpn r1 ,18    ;continue next index 
+mov #0,r1     ;r1=30 
+mov #1,r2     ;r2=23
+mov r2,#0     ;m[0]=23
+mov r1,#1     ;m[1]=30
+mov #0,r1     ; r1=23 -------start of 2.compare
+sub r1,#2     ;r1=(23-4)=19 
+jpn r1, 25    ;
+mov #0,r1     ;r1=23
+mov #2,r2     ;r2=4
+mov r2,#0     ;m[0]=4
+mov r1,#2     ;m[2]=23 
+mov #0,r1     ; 3.
+sub r1,#3     ;
+jpn r1 ,32    ;continue next index 
+mov #0,r1     ; 
+mov #3,r2     ;
+mov r2,#0     ;
+mov r1,#3     ;
+mov #0,r1     ; 4.
+sub r1,#4     ;
+jpn r1 ,39    ;continue next index 
+mov #0,r1     ; 
+mov #4,r2     ;
+mov r2,#0     ;
+mov r1,#4     ;
+mov #0,r1     ; 5.
+sub r1,#5     ;
+jpn r1 ,46    ;continue next index 
+mov #0,r1     ; 
+mov #5,r2     ;
+mov r2,#0     ;
+mov r1,#5     ;
+mov #0,r1     ; 6.
+sub r1,#6     ;
+jpn r1 ,53    ;continue next index 
+mov #0,r1     ; 
+mov #6,r2     ;
+mov r2,#0     ;
+mov r1,#6     ;
+mov #0,r1     ; 7.
+sub r1,#7     ;
+jpn r1 ,60    ;continue next index 
+mov #0,r1     ; 
+mov #7,r2     ;
+mov r2,#0     ;
+mov r1,#7     ;
+mov #0,r1     ; 8.
+sub r1,#8     ;
+jpn r1 ,67   ;continue next index 
+mov #0,r1     ; 
+mov #8,r2     ;
+mov r2,#0     ;
+mov r1,#8     ;
+mov #0,r1     ; 9.
+sub r1,#9     ;
+jpn r1 ,74   ;continue next index 
+mov #0,r1     ; 
+mov #9,r2     ;
+mov r2,#0     ;
+mov r1,#9     ;
+hlt
