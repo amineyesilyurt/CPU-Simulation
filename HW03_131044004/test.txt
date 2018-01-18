@@ -1,0 +1,7 @@
+mov r1;,, 10 ;the number which will calculate the square
+mov r1,r3 ;r3 is counter for each number 
+sub r3,1  ;fisrt counter decrease becase r2 has initial value
+mov r1,r2 ;r2 keeps each number's square 
+hlt
+prn r4    ;print the result on screen 
+hlt 
