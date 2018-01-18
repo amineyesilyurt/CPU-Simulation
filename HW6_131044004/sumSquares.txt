@@ -1,0 +1,16 @@
+mov r1, 10 ;the number which will calculate the square
+mov r1,r3 ;r3 is counter for each number 
+sub r3,1  ;fisrt counter decrease becase r2 has initial value
+mov r1,r2 ;r2 keeps each number's square
+jmp r3,7  ;if counter is zero go to 7.line
+sub r3,1  ;counter decrease
+add r2,r1 ;add number to r2 register 
+jmp r3,10 ;again check if counter zero, if it is, go to line 10
+jmp 5     ; if counter not zero continue adding 
+sub r1,1  ;when counter was zero, hen  load next number(9) to r1
+jmp r1,14 ;checking if numbers ending 
+add r4,r2 ;r4 keeps the sum of each numbers's squares
+jmp 2     ;if counter not zero then continue calculating the square of number
+add r4,1  ;finally adding one's square to sum
+prn r4    ;print the result on screen 
+hlt 

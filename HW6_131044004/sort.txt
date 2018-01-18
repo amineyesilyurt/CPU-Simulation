@@ -1,0 +1,87 @@
+mov #0,30 ;first we store the integers in memory 
+mov #1,23
+mov #2,4
+mov #3,56
+mov #4,34
+mov #5,56
+mov #6,89
+mov #7,32
+mov #8,45
+mov #9,25 ;***********************START-BUBBLE-SORT********************
+mov r2,12 ;worst case 12*9= 108 compares
+mov #0,r3 ;1st compare
+mov #1,r4
+mov #1,r1
+sub r1,r3
+jpn r1,60
+mov #1,r3 ;2nd compare
+mov #2,r4
+mov #2,r1
+sub r1,r3
+jpn r1,63
+mov #2,r3 ;3rd compare
+mov #3,r4
+mov #3,r1
+sub r1,r3
+jpn r1,66
+mov #3,r3 ;4th compare
+mov #4,r4
+mov #4,r1
+sub r1,r3
+jpn r1,69
+mov #4,r3 ;5th compare
+mov #5,r4
+mov #5,r1
+sub r1,r3
+jpn r1,72
+mov #5,r3 ;6th compare
+mov #6,r4
+mov #6,r1
+sub r1,r3
+jpn r1,75
+mov #6,r3 ;7th compare
+mov #7,r4
+mov #7,r1
+sub r1,r3
+jpn r1,78
+mov #7,r3 ;8th compare
+mov #8,r4
+mov #8,r1
+sub r1,r3
+jpn r1,81
+mov #8,r3 ;9th compare
+mov #9,r4
+mov #9,r1
+sub r1,r3
+jpn r1,84
+sub r2,1  ;decrease r2
+jmp r2,87 ;if 108 compare done, jump halt 
+jmp 12    ;else jump 12th line
+mov r3,#1 ;1st swap
+mov r4,#0
+jmp 17
+mov r3,#2 ;2nd swap
+mov r4,#1
+jmp 22
+mov r3,#3 ;3rd swap
+mov r4,#2
+jmp 27
+mov r3,#4 ;4th swap
+mov r4,#3
+jmp 32
+mov r3,#5 ;5th swap
+mov r4,#4
+jmp 37
+mov r3,#6 ;6th swap
+mov r4,#5
+jmp 42
+mov r3,#7 ;7th swap
+mov r4,#6
+jmp 47
+mov r3,#8 ;8th swap
+mov r4,#7
+jmp 52
+mov r3,#9 ;9th swap
+mov r4,#8
+jmp 57    ;jump 57th line and check counter(R2)
+hlt
